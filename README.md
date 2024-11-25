@@ -54,6 +54,6 @@ Submit a pull request with your changes or experiments.
 Contact
 Feel free to reach out for collaboration or feedback:
 
-Email: [Your Email]
-LinkedIn: [Your LinkedIn Profile]
+Email: mattbusel@gmail.com
+LinkedIn: https://www.linkedin.com/in/matthewbusel/
 Would you like me to include starter code or placeholders for specific experiment files?
