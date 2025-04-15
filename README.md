@@ -48,7 +48,7 @@ How to Contribute:
 Clone this repository:
 bash
 Copy code
-git clone https://github.com/YourUsername/mycelium-ai-integration.git  
+git clone 
 Check the issues tab for tasks or suggestions.
 Submit a pull request with your changes or experiments.
 Contact
