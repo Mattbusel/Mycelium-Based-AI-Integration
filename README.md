@@ -1,4 +1,4 @@
-# 🧠🌱 Mycelium-Based AI Integration  
+#  Mycelium-Based AI Integration  
 *Giving Machine Learning a Body Through Nature*
 
 ![Build](https://img.shields.io/badge/build-experimental-orange)
@@ -26,22 +26,22 @@ This repository explores the intersection of **synthetic biology** and **machine
 
 ---
 
-## 🚧 Current Progress
+## Current Progress
 
-### 🔍 Research & Exploration
+###  Research & Exploration
 - Analyzed mycelium’s signal-conducting and self-repairing properties.
 - Surveyed existing literature on bio-computing and neuromorphic interfaces.
 
-### 🧪 Prototyping
+###  Prototyping
 - **Phase 1**: Cultivating and testing signal conduction in mycelium samples.
 - **Phase 2** *(in progress)*: Interfacing with sensors and microcontrollers.
 
-### 🤖 Machine Learning Models
+###  Machine Learning Models
 - Initial supervised and unsupervised ML models are being tested to classify and adapt to mycelium behavior.
 
 ---
 
-## 📅 Roadmap & Milestones
+##  Roadmap & Milestones
 
 | Phase       | Timeline     | Objectives |
 |-------------|--------------|------------|
