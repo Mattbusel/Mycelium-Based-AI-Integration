@@ -49,18 +49,18 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Log entries will be dynamically inserted here -->
+      
         </tbody>
     </table>
 
     <script>
-        // Function to read and parse CSV file
+       
         function parseCSV(text) {
             const rows = text.split('\n');
             const result = [];
-            for (let i = 1; i < rows.length; i++) { // Skip header row
+            for (let i = 1; i < rows.length; i++) { 
                 const cols = rows[i].split(',');
-                if (cols.length === 8) { // Only process rows with the correct number of columns
+                if (cols.length === 8) { 
                     const logEntry = {
                         timestamp: cols[0],
                         best_model: cols[1],
@@ -77,7 +77,7 @@
             return result;
         }
 
-        // Function to load the CSV file (assumes you have a CSV file at the same location)
+     
         async function loadCSV() {
             const response = await fetch('model_performance_log.csv');
             const data = await response.text();
@@ -96,7 +96,7 @@
             });
         }
 
-        // Load the CSV data when the page loads
+      
         window.onload = loadCSV;
     </script>
 </body>
