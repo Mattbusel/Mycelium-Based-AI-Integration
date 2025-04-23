@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Performance Log</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Model Performance Log</h1>
+    <table id="performanceTable">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Best Model</th>
+                <th>Test MSE</th>
+                <th>Test R²</th>
+                <th>CV R² (Linear Regression)</th>
+                <th>CV R² (Ridge)</th>
+                <th>CV R² (Lasso)</th>
+                <th>CV R² (Random Forest)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Log entries will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Function to read and parse CSV file
+        function parseCSV(text) {
+            const rows = text.split('\n');
+            const result = [];
+            for (let i = 1; i < rows.length; i++) { // Skip header row
+                const cols = rows[i].split(',');
+                if (cols.length === 8) { // Only process rows with the correct number of columns
+                    const logEntry = {
+                        timestamp: cols[0],
+                        best_model: cols[1],
+                        test_mse: parseFloat(cols[2]),
+                        test_r2: parseFloat(cols[3]),
+                        cv_r2_linear: parseFloat(cols[4]),
+                        cv_r2_ridge: parseFloat(cols[5]),
+                        cv_r2_lasso: parseFloat(cols[6]),
+                        cv_r2_rf: parseFloat(cols[7]),
+                    };
+                    result.push(logEntry);
+                }
+            }
+            return result;
+        }
+
+        // Function to load the CSV file (assumes you have a CSV file at the same location)
+        async function loadCSV() {
+            const response = await fetch('model_performance_log.csv');
+            const data = await response.text();
+            const logEntries = parseCSV(data);
+            const tableBody = document.getElementById('performanceTable').getElementsByTagName('tbody')[0];
+            logEntries.forEach(entry => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).textContent = entry.timestamp;
+                row.insertCell(1).textContent = entry.best_model;
+                row.insertCell(2).textContent = entry.test_mse.toFixed(4);
+                row.insertCell(3).textContent = entry.test_r2.toFixed(4);
+                row.insertCell(4).textContent = entry.cv_r2_linear.toFixed(4);
+                row.insertCell(5).textContent = entry.cv_r2_ridge.toFixed(4);
+                row.insertCell(6).textContent = entry.cv_r2_lasso.toFixed(4);
+                row.insertCell(7).textContent = entry.cv_r2_rf.toFixed(4);
+            });
+        }
+
+        // Load the CSV data when the page loads
+        window.onload = loadCSV;
+    </script>
+</body>
+</html>
