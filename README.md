@@ -9,7 +9,7 @@
 This repository explores the intersection of **synthetic biology** and **machine learning** by using **mycelium** — the root structure of fungi — as a living, bio-computational interface. The project aims to give AI systems a *body* by integrating ML models with the **adaptive, reactive properties of mycelium**, creating feedback systems that blur the line between living and artificial intelligence.
 
 
-<img src="docs/system_Viz Graph.png" alt="System Architecture Diagram" width="700"/>
+<img src="docs/Viz Graph.png" alt="System Architecture Diagram" width="700"/>
 This diagram illustrates the layered design of the system:
 
 Biological Layer: Mycelium interfaced with electrodes and environmental stimuli.
