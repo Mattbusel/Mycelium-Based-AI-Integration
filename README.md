@@ -60,7 +60,7 @@ Output Layer: Results are exposed through APIs or visualized via HTML dashboards
 |-------------|--------------|------------|
 | Phase 1     | 0–6 Months   | Grow and analyze mycelium conductivity; design basic interfaces |
 | Phase 2     | 6–18 Months  | Integrate ML models with
-Absolutely—here’s a polished and updated version of your `README.md`, now with a clear **File Structure** section to help future-you (and any collaborators) get oriented fast:
+
 
 ---
 
