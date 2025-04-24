@@ -47,3 +47,52 @@ This repository explores the intersection of **synthetic biology** and **machine
 |-------------|--------------|------------|
 | Phase 1     | 0–6 Months   | Grow and analyze mycelium conductivity; design basic interfaces |
 | Phase 2     | 6–18 Months  | Integrate ML models with
+Absolutely—here’s a polished and updated version of your `README.md`, now with a clear **File Structure** section to help future-you (and any collaborators) get oriented fast:
+
+---
+
+
+
+---
+
+
+
+---
+
+## 📁 File Structure
+
+```
+mycelium-ai-integration/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── data/
+│   ├── raw/
+│   └── processed/
+├── notebooks/
+│   └── exploration.ipynb
+├── src/
+│   ├── __init__.py
+│   ├── model/
+│   │   ├── train.py
+│   │   ├── predict.py
+│   │   └── utils.py
+│   ├── bio_interface/
+│   │   ├── sensor_control.py
+│   │   └── mycelium_signals.py
+│   ├── api/
+│   │   └── model_api.py
+├── html/
+│   └── ML_Growth_Pattern.html
+├── sql/
+│   └── ml.sql
+├── experiments/
+│   └── self_repairing_ai.md
+├── config/
+│   └── settings.yaml
+├── docker/
+│   ├── Dockerfile
+│   └── docker-compose.yml
+└── docs/
+    └── architecture_diagram.png
+```
