@@ -4,7 +4,7 @@
 ![Build](https://img.shields.io/badge/build-experimental-orange)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 
 This repository explores the intersection of **synthetic biology** and **machine learning** by using **mycelium** — the root structure of fungi — as a living, bio-computational interface. The project aims to give AI systems a *body* by integrating ML models with the **adaptive, reactive properties of mycelium**, creating feedback systems that blur the line between living and artificial intelligence.
 
